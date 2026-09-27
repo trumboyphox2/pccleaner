@@ -3,62 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PC Cleaner Mini - Tải Phần Mềm Dọn Rác Máy Tính</title>
+    <title>PC Cleaner Mini - Tối Ưu Hóa & Dọn Rác Máy Tính</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            text-align: center;
-            padding: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
         }
         .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 650px;
+            width: 100%;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
         }
         h1 {
-            color: #2c3e50;
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #ffffff;
+            letter-spacing: -0.5px;
         }
         p {
-            color: #555;
+            color: #94a3b8;
+            font-size: 16px;
             line-height: 1.6;
+            margin-bottom: 35px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 35px;
+            text-align: left;
+        }
+        .feature-item {
+            background: rgba(15, 23, 42, 0.5);
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 14px;
+            color: #cbd5e1;
+        }
+        .feature-item strong {
+            color: #38bdf8;
+            display: block;
+            margin-bottom: 5px;
         }
         .btn {
             display: inline-block;
-            background-color: #27ae60;
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
             color: white;
-            padding: 12px 30px;
+            padding: 15px 35px;
             font-size: 18px;
             font-weight: bold;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            transition: 0.3s;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3);
+            transition: all 0.3s ease;
         }
         .btn:hover {
-            background-color: #219653;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 25px rgba(34, 197, 94, 0.4);
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
         }
         .note {
-            font-size: 12px;
-            color: #888;
-            margin-top: 15px;
+            font-size: 13px;
+            color: #64748b;
+            margin-top: 25px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <div class="badge">🚀 Phiên bản v1.0</div>
         <h1>PC Cleaner Mini</h1>
-        <p>Phần mềm dọn rác máy tính nhỏ gọn, giúp xóa file tạm và làm sạch thùng rác nhanh chóng chỉ với 1 cú click chuột. Bảo vệ không gian ổ cứng và tăng tốc độ máy tính của bạn.</p>
+        <p>Ứng dụng tối ưu hóa và dọn rác máy tính Windows siêu nhẹ. Xóa sạch file tạm, làm trống Thùng rác và lấy lại dung lượng ổ cứng chỉ trong 1 cú click.</p>
         
-        <!-- Thay thế dấu # bên dưới bằng link tải file .exe của bạn -->
-        <a href="URL_TAI_FILE_EXE_CUA_BAN" class="btn">Tải Về Ngay (.exe)</a>
+        <div class="features">
+            <div class="feature-item">
+                <strong>⚡ Siêu nhẹ & Nhanh</strong>
+                Không chiếm tài nguyên nền, chạy là dọn ngay.
+            </div>
+            <div class="feature-item">
+                <strong>🛡️ An toàn tuyệt đối</strong>
+                Tự động xin quyền Admin, chỉ xóa các file rác tạm thời.
+            </div>
+        </div>
+
+        <!-- Nhớ thay link tải file .exe của bạn vào chỗ dấu # bên dưới -->
+        <a href="https://github.com/trumboyphox2/pccleaner/blob/main/cleaner.exe" class="btn">Tải Xuống Ngay (.exe)</a>
         
-        <p class="note">Hệ điều hành hỗ trợ: Windows 10 / 11 (Tự động xin quyền Admin an toàn).</p>
+        <div class="note">Hệ điều hành tương thích: Windows 10 / 11</div>
     </div>
 
 </body>
