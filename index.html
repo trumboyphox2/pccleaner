@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Các thẻ tối ưu SEO để Google dễ tìm kiếm -->
+    <!-- Tối ưu SEO -->
     <title>PC Cleaner Mini - Phần Mềm Dọn Rác & Tối Ưu Hóa Máy Tính Windows</title>
     <meta name="description" content="Tải xuống PC Cleaner Mini - Ứng dụng dọn rác máy tính Windows siêu nhẹ, xóa file tạm, làm trống thùng rác và tăng tốc PC chỉ với 1 cú click chuột. An toàn, tự động xin quyền Admin.">
     <meta name="keywords" content="pc cleaner mini, phần mềm dọn rác pc, tối ưu hóa máy tính, xóa file tạm windows, tăng tốc máy tính, phần mềm dọn rác nhẹ">
@@ -32,7 +32,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             max-width: 650px;
             width: 100%;
-            padding: 50px;
+            padding: 40px 50px;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             text-align: center;
@@ -49,22 +49,22 @@
             border: 1px solid rgba(56, 189, 248, 0.3);
         }
         h1 {
-            font-size: 36px;
+            font-size: 34px;
             margin-bottom: 15px;
             color: #ffffff;
             letter-spacing: -0.5px;
         }
         p {
             color: #94a3b8;
-            font-size: 16px;
+            font-size: 15px;
             line-height: 1.6;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
         .features {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
             text-align: left;
         }
         .feature-item {
@@ -84,8 +84,8 @@
             display: inline-block;
             background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
             color: white;
-            padding: 15px 35px;
-            font-size: 18px;
+            padding: 14px 32px;
+            font-size: 17px;
             font-weight: bold;
             text-decoration: none;
             border-radius: 12px;
@@ -93,14 +93,89 @@
             transition: all 0.3s ease;
         }
         .btn:hover {
-           transform: translateY(-2px);
+            transform: translateY(-2px);
             box-shadow: 0 15px 25px rgba(34, 197, 94, 0.4);
             background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
         }
-        .note {
+        .footer-info {
             font-size: 13px;
             color: #64748b;
             margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            align-items: center;
+        }
+        .footer-info span {
+            color: #475569;
+        }
+        .terms-link {
+            color: #38bdf8;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .terms-link:hover {
+            text-decoration: underline;
+            color: #7dd3fc;
+        }
+
+        /* CSS cho Modal (Hộp thoại điều khoản) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal-content {
+            background: #1e293b;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 500px;
+            width: 100%;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: left;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+        .modal-content h3 {
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        .modal-content p {
+            font-size: 14px;
+            color: #cbd5e1;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .close-btn {
+            display: block;
+            width: 100%;
+            background: #334155;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.2s;
+        }
+        .close-btn:hover {
+            background: #475569;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -122,11 +197,42 @@
             </div>
         </div>
 
-        <!-- Nút tải đã gắn link raw chuẩn xác -->
+        <!-- Nút tải -->
         <a href="https://github.com/trumboyphox2/pccleaner/raw/refs/heads/main/cleaner.exe" class="btn">Tải Xuống Ngay (.exe)</a>
         
-        <div class="note">Hệ điều hành tương thích: Windows 10 / 11</div>
+        <div class="footer-info">
+            <span>HĐH: Windows 10 / 11</span>
+            <span>•</span>
+            <a class="terms-link" onclick="openModal()">Điều khoản & Bảo mật</a>
+        </div>
     </div>
+
+    <!-- Hộp thoại (Modal) hiển thị điều khoản -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <h3>📜 Điều khoản & Miễn trừ trách nhiệm</h3>
+            <p><strong>1. Tính an toàn:</strong> Ứng dụng chỉ can thiệp xóa các file rác tạm thời hệ thống (Temp) và làm trống Thùng rác (Recycle Bin), hoàn toàn không ảnh hưởng đến dữ liệu cá nhân của bạn.</p>
+            <p><strong>2. Miễn trừ trách nhiệm:</strong> Phần mềm được cung cấp miễn phí nguyên bản ("as-is"). Tác giả không chịu trách nhiệm pháp lý đối với bất kỳ sự cố ngoài ý muốn nào phát sinh trong quá trình sử dụng.</p>
+            <p><strong>3. Bản quyền:</strong> Thuộc quyền sở hữu của phát triển dự án PC Cleaner Mini.</p>
+            <button class="close-btn" onclick="closeModal()">Đã hiểu & Đóng</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('termsModal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('termsModal').style.display = 'none';
+        }
+        // Đóng modal khi bấm ra ngoài vùng nội dung
+        window.onclick = function(event) {
+            var modal = document.getElementById('termsModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
